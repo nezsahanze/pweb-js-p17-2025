@@ -347,3 +347,117 @@ button:hover,
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* buat login page */
+body.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff7f8;
+  position: relative;
+  overflow: hidden;
+}
+
+body.login-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    url('https://cdn-icons-png.flaticon.com/512/706/706164.png'),
+    url('https://cdn-icons-png.flaticon.com/512/3075/3075977.png'),
+    url('https://cdn-icons-png.flaticon.com/512/3480/3480745.png');
+  background-repeat: repeat;
+  background-size: 120px, 200px, 200px;
+  background-position: center;
+  opacity: 5;
+  filter: blur(10px);
+  z-index: -2;
+}
+
+body.login-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6);
+  z-index: -1;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 3rem 3.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.6s ease;
+}
+
+.login-container h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.login-container p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  color: #444;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1.5px solid #e2e2e2;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background-color: #fdfdfd;
+}
+
+.input-group input:focus {
+  border-color: #ff8fa3;
+  box-shadow: 0 0 0 3px rgba(255, 143, 163, 0.2);
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #005dc9;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
