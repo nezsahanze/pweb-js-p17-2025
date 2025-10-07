@@ -1,19 +1,41 @@
-<!DOCTYPE html>
-<html lang="id">
-
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Cooking Mama Recipes</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <div class="dashboard-container">
-        <h1>Login Berhasil! ✅</h1>
-        <p>Selamat datang kembali, <strong>Admin</strong>.</p>
-        <a href="index.html" class="logout-button">Logout</a>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>Cooking Mama</h1>
+    <div class="user-area">
+      <span id="user-name"></span>
+      <button id="logout-btn">Logout</button>
     </div>
-</body>
+  </nav>
 
+  <!-- Controls -->
+  <section class="controls">
+    <input id="search" type="text" placeholder="Search recipes...">
+    <select id="cuisine-select">
+      <option value="">All Cuisines</option>
+    </select>
+  </section>
+
+  <!-- Recipe Cards -->
+  <main id="recipes-container" class="recipe-grid"></main>
+
+  <button id="show-more">Show More</button>
+
+  <!-- Modal -->
+  <div id="recipe-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/recipes.js"></script>
+</body>
 </html>
