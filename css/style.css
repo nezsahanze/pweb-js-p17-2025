@@ -589,3 +589,22 @@ button:hover {
   text-decoration: none; 
   color: inherit;        
 }
+
+
+#logo-link {
+  display: flex;       
+  align-items: center;   
+  gap: 10px;             
+}
+
+/* Atur ukuran gambar logo */
+.navbar-logo {
+  height: 50px; 
+  width: auto;  
+  border-radius: 8px; 
+}
+
+
+#logo-link h1 {
+    margin: 0;
+}
