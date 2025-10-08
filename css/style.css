@@ -365,14 +365,13 @@ body.login-page::before {
   position: absolute;
   inset: 0;
   background-image: 
-    url('https://cdn-icons-png.flaticon.com/512/706/706164.png'),
+    url('https://wallpapers.com/images/hd/pink-checkered-2392-x-2312-wallpaper-aug4nlhb8hwt969m.png');
+    /*url('https://cdn-icons-png.flaticon.com/512/706/706164.png'),
     url('https://cdn-icons-png.flaticon.com/512/3075/3075977.png'),
-    url('https://cdn-icons-png.flaticon.com/512/3480/3480745.png');
-  background-repeat: repeat;
-  background-size: 120px, 200px, 200px;
+    url('https://cdn-icons-png.flaticon.com/512/3480/3480745.png');*/
+  background-size: 300px, 200px, 200px;
   background-position: center;
-  opacity: 5;
-  filter: blur(10px);
+  opacity: 100%;
   z-index: -2;
 }
 
@@ -435,12 +434,12 @@ body.login-page::after {
 
 .input-group input:focus {
   border-color: #ff8fa3;
-  box-shadow: 0 0 0 3px rgba(255, 143, 163, 0.2);
+  box-shadow: 0 0 0 4px rgba(255, 143, 163, 0.2);
   outline: none;
 }
 
 button {
-  background-color: #007bff;
+  background-color: #ffa2b9;
   color: #fff;
   border: none;
   padding: 0.9rem;
@@ -453,11 +452,84 @@ button {
 }
 
 button:hover {
-  background-color: #005dc9;
+  background-color: #ff708a;
   transform: translateY(-2px);
 }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tambahan CSS untuk pesan di halaman login */
+#message-container {
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  display: none;
+  /* Sembunyi secara default */
+}
+
+#message-container.loading {
+  display: block;
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+#message-container.success {
+  display: block;
+  background-color: #d4edda;
+  color: #155724;
+}
+
+#message-container.error {
+  display: block;
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* --- Tambahan CSS untuk Progress Bar --- */
+
+/* Class untuk menyembunyikan elemen */
+.hidden {
+  display: none !important;
+}
+
+#loading-container {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#loading-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar-container {
+  width: 100%;
+  background-color: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  width: 0%;
+  /* Dimulai dari 0% */
+  height: 18px;
+  background-color: #ff8fa3;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+  border-radius: 10px;
+  transition: width 0.1s linear;
+  /* Transisi agar pergerakan mulus */
+}
+
+#progress-text {
+  font-weight: 600;
+  color: #555;
 }

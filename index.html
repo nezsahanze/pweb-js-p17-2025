@@ -10,21 +10,32 @@
 
 <body class="login-page">
     <div class="login-container">
-        <h2>Login Akun</h2>
-        <p>Silakan masukkan username dan password "admin".</p>
+        <div id="login-content">
+            <h2>Login Akun</h2>
+            <p>Silakan masukkan username dan password Anda.</p>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
 
-        <form id="login-form" action="recipes.html">
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Username" required>
+        <div id="loading-container" class="hidden">
+            <p id="loading-text">Mencoba login...</p>
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
             </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="*******" required>
-            </div>
-            <button type="submit">Login</button>
-        </form>
+            <p id="progress-text">0%</p>
+        </div>
     </div>
+
+    <script src="js/login.js"></script>
 </body>
 
 </html>
