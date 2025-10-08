@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loginForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        const username = usernameInput.value.trim();
+        const username = usernameInput.value.trim().toLowerCase();
         const password = passwordInput.value.trim();
 
         if (!username || !password) {
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const users = JSON.parse(storedUsers);
-            const foundUser = users.find(user => user.username === username);
+            const foundUser = users.find(user => user.username.toLowerCase() === username);
 
             if (foundUser && foundUser.password === password) {
                 loadingText.textContent = "Login Berhasil! Mengalihkan...";
